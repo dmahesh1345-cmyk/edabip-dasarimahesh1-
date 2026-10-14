@@ -1,0 +1,12 @@
+[
+  {"id":"USR001","name":"Aarav Sharma","email":"aarav.sharma@stackly.com","role":"User","status":"Active","joinedOn":"2026-10-02"},
+  {"id":"USR002","name":"Ananya Patel","email":"ananya.patel@stackly.com","role":"User","status":"Active","joinedOn":"2026-09-18"},
+  {"id":"USR003","name":"Rohan Mehta","email":"rohan.mehta@stackly.com","role":"User","status":"Active","joinedOn":"2026-08-23"},
+  {"id":"USR004","name":"Priya Nair","email":"priya.nair@stackly.com","role":"User","status":"Active","joinedOn":"2026-10-07"},
+  {"id":"USR005","name":"Vikram Singh","email":"vikram.singh@stackly.com","role":"User","status":"Active","joinedOn":"2026-07-19"},
+  {"id":"USR006","name":"Meera Iyer","email":"meera.iyer@stackly.com","role":"User","status":"Active","joinedOn":"2026-10-11"},
+  {"id":"USR007","name":"Arjun Reddy","email":"arjun.reddy@stackly.com","role":"User","status":"Active","joinedOn":"2026-06-30"},
+  {"id":"USR008","name":"Kavya Menon","email":"kavya.menon@stackly.com","role":"User","status":"Active","joinedOn":"2026-09-29"},
+  {"id":"USR009","name":"Aditya Gupta","email":"aditya.gupta@stackly.com","role":"User","status":"Inactive","joinedOn":"2026-10-01"},
+  {"id":"USR010","name":"Neha Joshi","email":"neha.joshi@stackly.com","role":"User","status":"Inactive","joinedOn":"2026-05-12"}
+]

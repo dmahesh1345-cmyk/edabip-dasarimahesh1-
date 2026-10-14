@@ -1,0 +1,981 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5fc;
+    color: #182020;
+    font-size: 12px;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 151px;
+    min-width: 151px;
+    background: #046d37;
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    color: #4cc0bd;
+    font-size: 23px;
+}
+
+.menu {
+    margin-top: 3px;
+}
+
+.menu a {
+    height: 32px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dce9e8;
+    text-decoration: none;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: #1b6663;
+}
+
+.menu a.active {
+    background: #277c78;
+    color: white;
+    border-left: 3px solid #58cbc4;
+    padding-left: 13px;
+}
+
+.menu-icon {
+    width: 14px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   AI BOX
+========================================= */
+
+.ai-box {
+    margin: auto 12px 22px;
+    background: #46aaa7;
+    border-radius: 4px;
+    padding: 9px 7px;
+}
+
+.ai-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.robot {
+    font-size: 25px;
+}
+
+.ai-title strong {
+    display: block;
+    font-size: 12px;
+}
+
+.ai-title small {
+    display: block;
+    font-size: 7px;
+    margin-top: 2px;
+}
+
+.ai-box button {
+    width: 100%;
+    margin-top: 9px;
+    background: #07504d;
+    border: none;
+    color: white;
+    height: 24px;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    margin-left: 151px;
+    width: calc(100% - 151px);
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+    height: 43px;
+    background: white;
+    border-bottom: 1px solid #dddff1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-top {
+    width: 255px;
+    height: 27px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    color: #333;
+}
+
+.search-top input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 6px;
+    font-size: 10px;
+}
+
+.top-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 18px;
+}
+
+.profile {
+    width: 27px;
+    height: 27px;
+    background: #e8ebf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #115653;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    padding: 13px 15px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title h1 {
+    font-size: 16px;
+    margin-bottom: 13px;
+}
+
+.welcome {
+    background: white;
+    padding: 12px 13px;
+    width: 550px;
+    border-radius: 4px;
+}
+
+.welcome h2 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.welcome p {
+    font-size: 9px;
+    color: #555;
+}
+
+.realtime {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: normal;
+    color: #176553;
+    background: #e7f5ed;
+    border: 1px solid #b9e2c8;
+    border-radius: 10px;
+    padding: 3px 7px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.page-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.refresh-time {
+    font-size: 9px;
+    color: #444;
+}
+
+.export {
+    position: absolute;
+    right: 16px;
+    top: 59px;
+    height: 25px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 3px;
+    background: #125b58;
+    color: white;
+    font-size: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 9px;
+}
+
+.filters button {
+    height: 27px;
+    background: white;
+    border: 1px solid #aab7b8;
+    border-radius: 3px;
+    padding: 0 11px;
+    font-size: 9px;
+    color: #2b3637;
+}
+
+.filters .refresh {
+    background: #12615e;
+    border-color: #12615e;
+    color: white;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    padding: 0 15px 14px;
+}
+
+.stat-card {
+    min-height: 94px;
+    background: white;
+    border: 1px solid #e0e1eb;
+    border-radius: 7px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    background: #145c58;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.stat-card:nth-child(2) .stat-icon {
+    background: #31866d;
+}
+
+.stat-card:nth-child(3) .stat-icon {
+    background: #a87338;
+}
+
+.stat-card:nth-child(4) .stat-icon {
+    background: #5474a8;
+}
+
+.stat-content h3 {
+    margin-bottom: 3px;
+    color: #526060;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.stat-content strong {
+    display: block;
+    color: #182020;
+    font-size: 21px;
+    line-height: 1.1;
+}
+
+.stat-content small {
+    display: block;
+    margin-top: 4px;
+    color: #7a8585;
+    font-size: 7px;
+}
+
+/* =========================================
+   PANELS
+========================================= */
+
+.panel {
+    background: white;
+    margin: 0 15px 14px;
+    border: 1px solid #dedfe8;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.panel-header {
+    height: 45px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-header h2 {
+    font-size: 13px;
+}
+
+.panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-search {
+    width: 181px;
+    height: 26px;
+    border: 1px solid #e6dcc1;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+    color: #333;
+}
+
+.table-search input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0 5px;
+    font-size: 9px;
+}
+
+.panel-actions button {
+    height: 26px;
+    border-radius: 3px;
+    padding: 0 9px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.delete {
+    border: 1px solid #bfc7c9;
+    background: white;
+    color: #333;
+}
+
+.add {
+    border: 1px solid #9bcfe4;
+    background: #c7eaf7;
+    color: #173c4b;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-wrapper {
+    overflow-x: auto;
+    padding: 0 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    background: #105752;
+    color: white;
+}
+
+th {
+    height: 20px;
+    text-align: left;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 0 7px;
+}
+
+td {
+    height: 20px;
+    border-bottom: 1px solid #e4e5e8;
+    padding: 0 7px;
+    font-size: 8px;
+    color: #303737;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td:last-child {
+    text-align: center;
+    color: #145b58;
+    font-weight: bold;
+}
+
+.check {
+    width: 25px;
+}
+
+#userTable th:nth-child(2) {
+    width: 11%;
+}
+
+#userTable th:nth-child(3) {
+    width: 19%;
+}
+
+#userTable th:nth-child(4) {
+    width: 29%;
+}
+
+#userTable th:nth-child(5) {
+    width: 15%;
+}
+
+#userTable th:nth-child(6) {
+    width: 13%;
+}
+
+#userTable th:nth-child(7) {
+    width: 12%;
+}
+
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    accent-color: #12605d;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px;
+    color: #526060;
+    font-size: 8px;
+}
+
+.pagination > div {
+    display: flex;
+    gap: 3px;
+}
+
+.pagination button {
+    height: 20px;
+    min-width: 20px;
+    border: none;
+    background: white;
+    color: #4d5555;
+    font-size: 8px;
+    border-radius: 3px;
+}
+
+.pagination button.selected {
+    background: #12605d;
+    color: white;
+}
+
+
+/* =========================================
+   ROLE MANAGEMENT
+========================================= */
+
+.roles-panel {
+    margin-bottom: 18px;
+}
+
+.role-dialog {
+    width: min(420px, calc(100% - 32px));
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #dedfe8;
+    border-radius: 8px;
+    color: #182020;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.role-dialog::backdrop {
+    background: rgba(15, 35, 35, 0.45);
+}
+
+.role-dialog form {
+    display: grid;
+    gap: 8px;
+}
+
+.role-dialog h2 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.role-dialog label {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.role-dialog input,
+.role-dialog textarea,
+.role-dialog select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd2d3;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.role-dialog textarea {
+    resize: vertical;
+}
+
+.role-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.role-dialog-actions button {
+    min-height: 30px;
+    padding: 0 12px;
+    border: 1px solid #bfc7c9;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.role-dialog-actions button.add {
+    border-color: #9bcfe4;
+    background: #c7eaf7;
+    color: #173c4b;
+}
+
+.row-edit {
+    border: 0;
+    background: transparent;
+    color: #145b58;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.roles-panel th:nth-child(1) {
+    width: 12%;
+}
+
+.roles-panel th:nth-child(2) {
+    width: 16%;
+}
+
+.roles-panel th:nth-child(3) {
+    width: 26%;
+}
+
+.roles-panel th:nth-child(4) {
+    width: 10%;
+}
+
+.roles-panel th:nth-child(5) {
+    width: 20%;
+}
+
+.status {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 6px;
+    min-width: 34px;
+    text-align: center;
+}
+
+.active-status {
+    color: #2d8339;
+    border: 1px solid #9dd6a3;
+    background: #effbef;
+}
+
+.inactive-status {
+    color: #bd4545;
+    border: 1px solid #e5aaaa;
+    background: #fff0f0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    color: #92979e;
+    font-size: 8px;
+}
+
+
+/* =========================================
+   FLOATING AI BUTTON
+========================================= */
+
+.floating-ai {
+    position: fixed;
+    right: 25px;
+    bottom: 18px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background: #075b58;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border: 0;
+    cursor: pointer;
+}
+
+button,
+select,
+input {
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #48aaa5;
+    outline-offset: 2px;
+}
+
+.filters {
+    align-items: center;
+}
+
+.filters select {
+    height: 27px;
+    padding: 0 8px;
+    border: 1px solid #aab7b8;
+    border-radius: 3px;
+    background: white;
+    font-size: 9px;
+}
+
+.filter-label {
+    font-size: 9px;
+    color: #526060;
+}
+
+.sort-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.status-toggle {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.load-message {
+    margin: 0 15px 12px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background: #eaf4f3;
+    color: #145b58;
+    font-size: 11px;
+}
+
+.load-message[hidden],
+.retry-button[hidden] {
+    display: none;
+}
+
+.load-error,
+.toast-error {
+    background: #fff0f0;
+    color: #9c2828;
+}
+
+.retry-button {
+    margin: 0 15px 12px;
+    padding: 7px 10px;
+    border: 1px solid #12615e;
+    border-radius: 4px;
+    background: white;
+    color: #12615e;
+    cursor: pointer;
+}
+
+.empty-state {
+    height: 54px;
+    text-align: center;
+    color: #687575;
+    font-size: 11px;
+}
+
+.field-error {
+    color: #a12727;
+    font-size: 10px;
+}
+
+.toast-message {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1000;
+    max-width: calc(100vw - 36px);
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #0f5f5d;
+    color: white;
+    font-size: 11px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toast-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.role-dialog {
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 65px;
+        min-width: 65px;
+    }
+
+    .main {
+        margin-left: 65px;
+        width: calc(100% - 65px);
+    }
+
+    .logo span:last-child,
+    .menu a {
+        font-size: 0;
+    }
+
+    .menu a {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu a.active {
+        padding-left: 0;
+    }
+
+    .menu-icon {
+        font-size: 15px;
+    }
+
+    .ai-box {
+        padding: 5px;
+    }
+
+    .ai-title > div:last-child,
+    .ai-box button {
+        display: none;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .welcome {
+        width: 100%;
+    }
+
+    .page-actions {
+        align-items: flex-start;
+    }
+
+    .export {
+        position: static;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 0 8px;
+    }
+
+    .search-top {
+        width: 180px;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .panel {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .panel-header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .panel-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .table-search {
+        width: 100%;
+    }
+
+    table {
+        min-width: 750px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    footer {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .welcome {
+        padding: 10px;
+    }
+
+    .load-message,
+    .retry-button {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}

@@ -1,0 +1,12 @@
+[
+  {"id":"ROL001","name":"Administrator","description":"Full access to all modules and settings","status":"Active","permissions":"All Modules"},
+  {"id":"ROL002","name":"Editor","description":"Can create and modify data, reports and dashboards","status":"Inactive","permissions":"Data ETL, Reports, Dashboards"},
+  {"id":"ROL003","name":"Viewer","description":"Can view data, reports and dashboards","status":"Active","permissions":"Reports, Dashboards (View Only)"},
+  {"id":"ROL004","name":"Business Analyst","description":"Can view and analyze reports","status":"Active","permissions":"Reports, Analytics"},
+  {"id":"ROL005","name":"Administrator","description":"Full access to all modules and settings","status":"Active","permissions":"All Modules"},
+  {"id":"ROL006","name":"Editor","description":"Can create and modify data, reports and dashboards","status":"Inactive","permissions":"Data ETL, Reports, Dashboards"},
+  {"id":"ROL007","name":"Viewer","description":"Can view data, reports and dashboards","status":"Active","permissions":"Reports, Dashboards (View Only)"},
+  {"id":"ROL008","name":"Business Analyst","description":"Can view and analyze reports","status":"Active","permissions":"Reports, Analytics"},
+  {"id":"ROL009","name":"Administrator","description":"Full access to all modules and settings","status":"Inactive","permissions":"All Modules"},
+  {"id":"ROL010","name":"Editor","description":"Can create and modify data, reports and dashboards","status":"Active","permissions":"Data ETL, Reports, Dashboards"}
+]
